@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}Home{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <ul style="display: flex; gap: 30px; justify-content: end;">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'sobre' %}">Sobre</a></li>
+            <li><a href="{% url 'entre_em_contato' %}">Contato</a></li>
+        </ul>
+    </nav>
+    
+    {% block conteudo %} 
+        <h1>Bem vindo ao nosso site !</h1>
+    {% endblock %}
+    
+</body>
+</html>
